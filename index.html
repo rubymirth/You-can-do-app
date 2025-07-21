@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>You Can Do</title>
+    <link rel="icon" href="icon.png" />
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #7e57c2, #4caf50, #2196f3);
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+        h1 {
+            font-size: 3em;
+        }
+        .phrase {
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+        .checklist, .calendar {
+            background: white;
+            color: black;
+            border-radius: 12px;
+            padding: 20px;
+            margin: 10px;
+            width: 90%;
+            max-width: 400px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        button {
+            background-color: #7e57c2;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #5e35b1;
+        }
+        .flag {
+            font-size: 2em;
+        }
+    </style>
+</head>
+<body>
+    <div class="flag">🇺🇸 You Can Do 🇻🇪</div>
+    <h1>You Can Do</h1>
+    <div class="phrase" id="phrase">Loading phrase...</div>
+    <div class="checklist">
+        <h2>✅ Checklist diario</h2>
+        <ul id="checklist">
+            <li><input type="checkbox" /> Escucha & Vocabulario / Listening & Vocabulary</li>
+            <li><input type="checkbox" /> Frases útiles / Useful Phrases</li>
+            <li><input type="checkbox" /> Comprensión y conversación / Listening & Speaking</li>
+            <li><input type="checkbox" /> Gramática con audio / Grammar with Audio</li>
+            <li><input type="checkbox" /> Pronunciación y acento / Pronunciation</li>
+            <li><input type="checkbox" /> Vocabulario temático / Thematic Vocabulary</li>
+            <li><input type="checkbox" /> Resumen & práctica / Summary & Practice</li>
+        </ul>
+    </div>
+    <div class="calendar">
+        <h2>📅 Calendario (marca tus días)</h2>
+        <p>*Calendario interactivo en la próxima versión*</p>
+    </div>
+    <button onclick="alert('Recordatorios activados (próximamente)')">Activar Recordatorios 🔔</button>
+    <script>
+        const phrases = [
+            'Hoy es un gran día para avanzar / Today is a great day to progress',
+            'Paso a paso, llegarás lejos / Step by step, you will go far',
+            'Tu futuro empieza con lo que hagas hoy / Your future starts with what you do today',
+            'Nunca es tarde para mejorar tu inglés / It is never too late to improve your English',
+            'Cree en ti, ¡You Can Do It! / Believe in yourself, You Can Do It!',
+        ];
+        document.getElementById('phrase').innerText = phrases[Math.floor(Math.random() * phrases.length)];
+    </script>
+</body>
+</html>
